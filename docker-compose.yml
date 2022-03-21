@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  web:
+    build: .
+    command: smcplayer-start
+    volumes:
+      - .:/code
+      - ./music:/code/music
+    ports:
+      - "8000:8000"
